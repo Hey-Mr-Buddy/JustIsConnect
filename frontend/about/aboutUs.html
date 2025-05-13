@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just is Connect</title>
+
+    <link rel="icon" type="image/png" href="logoPNG.png">
+
+    <link rel="stylesheet" href="../assets/css/aboutUs.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm"></script>
+
+
+</head>
+<body id="body">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <img src="assets/images/logoPng.png">
+            <h3>Just is Connect</h3>
+        </div>
+        <div class="navTabs">
+            <a href="#" id="navActive">About</a>
+            <a href="#">AI Consult</a>
+            <!-- <a href="../contact/index.html">Contact Us</a> -->
+
+            <!-- <a href="#">Engage</a> -->
+            <!-- <a href="#">Partners</a> -->
+            <!-- <a href="#">Pricing</a> -->
+        </div>
+
+        <div class="buttons">
+            <button class="loginBtn" onclick="window.location.href='../login/index.html#login'">Log In</button>
+            <button class="signupBtn" onclick="window.location.href='../login/index.html#signup'">Create Account</button>
+        </div>
+    </header>
+
+
+
+
+
+
+<!-- Search bar -->
+    <div id="searchBarDiv">
+    <input type="text" id="triggerSearch" placeholder="Search lawyers by name, specialization, location..." class="search-bar" readonly>
+    <!-- rest of the part of search code is just below the html page near script tags -->
+    </div>
+
+
+    
+
+
+
+
+
+
+    <!-- MAIN -->
+    <div class="mainDiv">
+
+
+        <!-- <div class="search-container">
+            <input type="text" id="searchBox" placeholder="Search lawyers by name, specialization, location..." autocomplete="off">
+            <ul id="suggestions"></ul>
+        </div> -->
+
+
+
+          
+
+
+
+
+        <div id="allInOne">
+            <div>
+                <h2>The all in one <span class="highlight">Legal Platform</span> you've been looking for</h2>
+                
+                <p>We make accessing legal expertise easy and efficient. Browse our lawyer directory to find the right lawyer with just one click, or go through a few simple steps in our 'Get a Lawyer' feature to get matched with the best lawyer for your situation.</p>
+                
+                <button class="buttonExplore">Explore Now</button>
+            </div>
+            
+            <div class="imageAllInOne">
+                <img src="assets/images/girlStuding.avif">
+            </div>
+        </div>
+
+
+
+
+
+        <div class="rangeOfServices">
+            <h3>Range of Services</h3>
+
+            <div class="servicesContainer">
+                    <div class="box red" onclick="navigateTo('/find-a-lawyer')">Lawyer Discovery & Hiring</div>
+                    <div class="box yellow" onclick="navigateTo('/ai-chatbot')">AI-Powered Legal Guidance</div>
+                    <div class="box green" onclick="navigateTo('/find-a-lawyer')">Direct Messaging & Consultation Booking</div>
+                    <div class="box blue" onclick="navigateTo('/dashboard')">User & Lawyer Profiles</div>
+                    <div class="box indigo" onclick="navigateTo('/community-blog')">Legal Community & Knowledge Hub</div>
+                    <div class="box purple" onclick="navigateTo('/payments')">Secure & Transparent Payment System</div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <div id="supercharge">
+            <h2>Supercharge your consultancies</h2>
+            <h2>with Just is Connect</h2>
+            <div>
+                <button class="signupBtn">Sign Up Now</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div>
+            <div class="logoFooter">
+            <img src="assets/images/logoPng.png">
+            <h4>Just is Connect - Your Legal Ally, Anytime, Anywhere</h4>
+            </div>
+            <br> <br> <br>
+            <p>
+                Just is Connect is transforming legal access by seamlessly connecting businesses, individuals, and legal professionals. Whether you're a startup navigating compliance, a corporation handling contracts, or an individual seeking legal guidance, our platform ensures quick, reliable, and expert-driven solutions. We simplify legal processes, making them more accessible, efficient, and hassle-free.
+                <br> <br>
+                Our AI-powered legal assistant provides instant insights tailored to the Indian legal system, answering queries and offering guidance and recommendations, empowering users with knowledge at their fingertips.
+                <br> <br>
+                Beyond consultations, Just is Connect fosters a thriving legal community, enabling lawyers to expand their reach, collaborate, and grow. With a trusted network of professionals, finding the right legal expertise has never been easier.
+                <br> <br>
+                Redefining legal help - effortless, fearless, and just a click away, because the law works best when it works for you
+            </p>
+        </div>
+
+
+        <div id="footerSection">
+            <div>
+                <h3>Company</h3>
+                <a href="">About</a>
+                <a>Carrers</a>
+                <a>Help Center</a>
+            </div>
+
+            <div>
+                <h3>Resources</h3>
+                <a href="../login/index.html#signUp">Sign Up</a>
+                <a>Find Lawyer</a>
+                <a>Get Visibility</a>
+                <a>Blogs & Articles</a>
+            </div>
+        </div>
+
+
+        <div class="emailUs">
+            <!-- <h3>Email Us</h3>
+            <form>
+                <input type="text" placeholder="Your name" required>
+                <input type="email" placeholder="Your email" required>
+                <textarea placeholder="Your message" required></textarea>
+                <button type="submit">SEND</button>
+            </form> -->
+
+            <h3 id="connectHeadingSocialFooter">Connect with us on</h3>
+
+            <a href="#"><img src="assets/images/linkedin.webp"></a>
+            <a href="#"><img src="assets/images/instagram.png"></a>
+            <a href="#"><img src="assets/images/twitter.webp"></a>
+        </div>
+    </footer>
+
+
+
+
+    
+
+<!-- Search bar Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+          <input type="text" placeholder="Start typing to search..." autofocus id="modalSearchInput">
+        </div>
+    </div>
+
+
+
+
+<!-- Scripts -->
+    <script src="../assets/js/search.js"></script>
+</body>
+</html>

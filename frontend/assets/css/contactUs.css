@@ -1,0 +1,110 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Inter', sans-serif;
+    /* background: linear-gradient(to right, #f0f4ff, #dfefff); */
+    background-color: #02285a;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Container for contact form */
+  .contact-wrapper {
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  /* The white box */
+  .contact-box {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading */
+  .contact-box h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Subtext */
+  .contact-box p {
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  /* Each input group */
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Label text */
+  .input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  
+  /* Input and Textarea styling */
+  .input-group input,
+  .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  /* Focus effect */
+  .input-group input:focus,
+  .input-group textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+  }
+  
+  /* Textarea height */
+  textarea {
+    height: 120px;
+    resize: vertical;
+  }
+  
+  /* Submit Button */
+  .buttonContainer  {
+    display: flex;
+    justify-content: center;
+  }
+  button[type="submit"] {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect on button */
+  button[type="submit"]:hover {
+    background-color: #0078d7;
+  }
+  
+  /* Response message styling */
+  .response-message {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+  

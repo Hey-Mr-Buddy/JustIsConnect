@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JustisConnect | Sign Up & Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/login.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <div class="logo-area">
+      <img src="../assets/images/logoPng.png" alt="JustisConnect Logo" class="logo">
+      <h2>Welcome to Just is Connect</h2>
+    </div>
+
+    <ul class="tabs">
+      <li class="tab active"><a href="#signup">Sign Up</a></li>
+      <li class="tab"><a href="#login">Log In</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="signup" class="tab-pane">
+        <h3>Create Your Account</h3>
+        <form id="signup-form" method="post">
+          <div class="input-group">
+            <label>Username<span>*</span></label>
+            <input type="text" name="signup-username" required>
+          </div>
+          <div class="input-group">
+            <label>Email Address<span>*</span></label>
+            <input type="email" name="signup-email" required>
+          </div>
+          <div class="input-group">
+            <label>Password<span>*</span></label>
+            <input type="password" name="signup-password" required>
+          </div>
+
+        <div class="input-group">
+          <label>Account Type<span>*</span></label>
+          <select name="signup-type" required>
+            <option value="">-- Select --</option>
+            <option value="Individual">Individual</option>
+            <option value="Business">Business</option>
+            <option value="Lawyer">Lawyer</option>
+            <option value="Law Firm">Law Firm</option>
+          </select>
+        </div>
+
+      <button type="submit" class="btn">Get Started</button>
+        </form>
+      </div>
+
+      <div id="login" class="tab-pane hidden">
+        <h3>Log In to Your Account</h3>
+        <form id="login-form" method="post">
+          <div class="input-group">
+            <label>Email Address<span>*</span></label>
+            <input type="email" name="login-identifier" required>
+          </div>
+          <div class="input-group">
+            <label>Password<span>*</span></label>
+            <input type="password" name="login-password" required>
+          </div>
+          <div class="forgot"><a href="#">Forgot Password?</a></div>
+          <button type="submit" class="btn">Log In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="../assets/js/login.js"></script>
+</body>
+</html>

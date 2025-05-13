@@ -1,0 +1,26 @@
+<!-- Example: frontend/dashboard/business.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Business Dashboard</title>
+</head>
+<body>
+  <script>
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (!user) {
+      window.location.href = "../login/index.html";
+    }
+
+    const expectedRole = "Business";
+
+    if (user.account_type !== expectedRole) {
+      alert("Access denied: Unauthorized role.");
+      window.location.href = "../login/index.html";
+    }
+  </script>
+
+  <h1>Welcome!</h1>
+  <p>You are using a business account.</p>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+
+  <!-- Linking external CSS -->
+  <link rel="stylesheet" href="../assets/css/contactUs.css" />
+
+  <!-- Google Font for better typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="contact-wrapper">
+    <div class="contact-box">
+      <h2>Let's Talk!</h2>
+      <p>Have questions or feedback? Fill out the form below and we'll get back to you!</p>
+      
+      <!-- Contact form -->
+      <form id="contactForm">
+        <!-- Input: Name -->
+        <div class="input-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="e.g. Vikram" required />
+        </div>
+
+        <!-- Input: Email -->
+        <div class="input-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" placeholder="e.g. you@example.com" required />
+        </div>
+
+        <!-- Input: Message -->
+        <div class="input-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" placeholder="Write your message..." required></textarea>
+        </div>
+
+        <div class="buttonContainer">
+        <!-- Submit button -->
+        <button type="submit">Send Message</button>
+        </div>
+      </form>
+
+      <!-- Response message -->
+      <p id="responseMessage" class="response-message"></p>
+    </div>
+  </div>
+
+  <!-- Linking external JS -->
+  <script src="../assets/js/contactUs.js"></script>
+</body>
+</html>

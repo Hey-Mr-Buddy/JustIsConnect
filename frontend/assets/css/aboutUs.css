@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+    
+#body {
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+
+
+
+
+/* HEADER */
+.header{
+    position: fixed;
+    background-color: white;
+    margin: auto;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 60px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.logo img {
+    height: 40px;
+    width: auto;
+}
+.navTabs a {
+    margin: 15px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.navTabs a:hover {
+    color: #004aad;
+}
+#navActive {
+    border-bottom: 2px solid black;
+}
+#navActive:hover {
+    border-bottom: 2px solid #004aad;
+}
+
+.buttons button {
+    margin: 15px;
+    cursor: pointer;
+}
+.signupBtn {
+    padding: 10px 15px;
+    border: none;
+    background-color: #004aad;
+    color: white;
+    transition: background-color 0.5s ease;
+}
+.signupBtn:hover {
+    background-color: #0078d7;}
+.loginBtn {
+    padding: 10px 15px;
+    background-color: white;
+    border: 2px solid #004aad;
+    transition: background-color 0.5s ease;
+}
+.loginBtn:hover {
+    padding: 10px 15px;
+    border: 2px solid #004aad;
+    background-color: #0078d7;
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* Search bar functionality with modal */
+  #searchBarDiv {
+    text-align: center;
+    padding-top: 150px;
+  }
+  .search-bar {
+    padding: 12px 15px;
+    font-size: 15px;
+    border-radius: 30px;
+    border: 2px solid #ccc;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 35%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .search-bar:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+  }
+  .modal {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
+    animation: zoomIn 0.3s ease;
+  }
+  .modal input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    outline: none;
+  }
+  #content.faded {
+    filter: blur(4px) brightness(0.6);
+    pointer-events: none;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+/* MAIN */
+.mainDiv {
+    padding-top: 60px;
+}
+
+
+
+#allInOne {
+    padding: 0px 0px 45px 0px;
+    display: flex;
+    flex-direction: row;
+}
+#allInOne div {
+    flex: 1;
+    padding: 60px;
+}
+#allInOne div h2 {
+    font-size: 45px;
+    padding: 30px 0px;
+}
+.highlight {
+    color: #004aad;
+}
+.imageAllInOne {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#allInOne img {
+    width: 480px;
+    height: auto;
+    border-radius: 15px;
+}
+.buttonExplore {
+    margin: 30px 0px 30px 0px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #004aad;
+    color: white;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+}
+
+
+
+
+
+.rangeOfServices {
+    margin: 0px 60px 60px 60px;
+    padding: 45px 90px;
+    background-color: rgb(220, 235, 250);
+    border-radius: 30px;
+}
+.rangeOfServices h3 {
+    text-align: center;
+    font-size: 30px;
+}
+.servicesContainer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 0.3fr));
+    gap: 30px;
+    justify-content: center;
+    margin: 60px auto;
+}
+.box {
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
+}
+.box:hover {
+    transform: scale(1.05);
+}
+.red { background-color: #ef4444; }
+.yellow { background-color: #eab308; }
+.green { background-color: #22c55e; }
+.blue { background-color: #3b82f6; }
+.indigo { background-color: #6366f1; }
+.purple { background-color: #9333ea; }
+
+
+
+
+
+
+#supercharge {
+    margin: 15 auto 0 auto;
+    text-align: left;
+    padding: 45px;
+    padding-left: 150px;
+    background-color: rgb(220, 235, 250);
+}
+#supercharge h2 {
+    font-size: 45px;
+}
+#supercharge button {
+    margin-top: 45px;
+    padding: 15px 30px;
+    font-size: 15px;
+}
+
+
+
+
+
+#footer {
+    bottom: 0;
+    left: 0;
+    /* width: 100%; */
+    background-color: black;
+    color: white;
+    margin: auto;
+    padding: 60px 90px 60px 90px;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+#footer div {
+    flex: 1;
+}
+#footer p {
+    color: rgb(212, 212, 212);
+}
+#footer a {
+    text-decoration: none;
+    color: #0078d7;
+}
+#footerSection div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 0px 0px 90px 0px;
+}
+.logoFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.logoFooter img {
+    background-color: whitesmoke;
+    padding: 10px;
+    height: 90px;
+    width: auto;
+}
+#footerSection div h3 {
+    margin: 0px 0px 30px 0px;
+}
+#footerSection div a {
+    margin: 5px 0px 5px 0px;
+    transition: 0.3s ease;
+}
+#footerSection div a:hover {
+    color: white;
+    cursor: pointer;
+}
+
+
+.emailUs form {
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    gap: 15px;
+}
+.emailUs input, textarea {
+    background-color: #161a21;
+    border: none;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+}
+.emailUs textarea {
+    height: 90px;
+    resize: none;
+}
+.emailUs button {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.emailUs button:hover {
+    background-color: #444;
+}
+#connectHeadingSocialFooter {
+    /* margin: 90px auto 30px auto; */
+    margin: auto auto 30px auto;
+}
+.emailUs a {
+    margin: auto 30px auto auto;
+}
+.emailUs a img {
+    height: 30px;
+    width: auto;
+}
+
+
+
+
+
