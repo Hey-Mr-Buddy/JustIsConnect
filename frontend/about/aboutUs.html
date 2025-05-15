@@ -22,7 +22,7 @@
         </div>
         <div class="navTabs">
             <a href="#" id="navActive">About</a>
-            <a href="#">AI Consult</a>
+            <a href="">AI Consult</a>
             <!-- <a href="../contact/index.html">Contact Us</a> -->
 
             <!-- <a href="#">Engage</a> -->
@@ -77,7 +77,7 @@
                 
                 <p>We make accessing legal expertise easy and efficient. Browse our lawyer directory to find the right lawyer with just one click, or go through a few simple steps in our 'Get a Lawyer' feature to get matched with the best lawyer for your situation.</p>
                 
-                <button class="buttonExplore">Explore Now</button>
+                <button class="buttonExplore" onclick="scrollToRangeOfServices()">Explore Now</button>
             </div>
             
             <div class="imageAllInOne">
@@ -89,7 +89,7 @@
 
 
 
-        <div class="rangeOfServices">
+        <div class="rangeOfServices" id="servicesSectionForJS">
             <h3>Range of Services</h3>
 
             <div class="servicesContainer">
@@ -110,7 +110,7 @@
             <h2>Supercharge your consultancies</h2>
             <h2>with Just is Connect</h2>
             <div>
-                <button class="signupBtn">Sign Up Now</button>
+                <button class="signupBtn" onclick="window.location.href='../login/index.html#signup'">Sign Up Now</button>
             </div>
         </div>
     </div>
@@ -191,5 +191,7 @@
 
 <!-- Scripts -->
     <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/aboutUs.js"></script>
+
 </body>
 </html>
