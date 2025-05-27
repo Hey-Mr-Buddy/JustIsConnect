@@ -74,6 +74,14 @@ CREATE TABLE lawyers (
 );
 ```
 
+To Update tables:
+```bash
+UPDATE users
+SET account_type = '' // Business, Law Firm, Individual, Lawyer
+WHERE username = '' AND email = ''; // Check with command SELECT * FROM users;
+```
+
+
 #### Setup Codebase:
 
 Open Git Bash:
