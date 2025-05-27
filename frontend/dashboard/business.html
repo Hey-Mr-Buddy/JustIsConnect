@@ -1,26 +1,245 @@
-<!-- Example: frontend/dashboard/business.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Business Dashboard</title>
+  <style>
+    :root {
+      --primary-color: #004aad;
+      --accent-color: #0078d7;
+      --text-color: #222;
+      --bg-color: #f9f9f9;
+      --card-bg: #ffffff;
+      --shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 75px;
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 60px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .navTabs a {
+      margin: 0 15px;
+      font-size: 1rem;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    .navTabs a:hover {
+      color: #004aad;
+    }
+
+    .buttons button {
+      padding: 10px 15px;
+      background-color: #004aad;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .buttons button:hover {
+      background-color: #0078d7;
+    }
+
+    .hero {
+      margin-top: 70px;
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTflA2E_BFKbXCAJfqpFC9Qcab5FdUXJSmfqA&s');
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      position: relative;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-overlay h2 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .dashboard {
+      padding: 40px 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
+    .card p,
+    .card blockquote {
+      font-size: 1rem;
+      color: #444;
+    }
+
+    .quote-author {
+      display: block;
+      margin-top: 8px;
+      text-align: right;
+      font-style: italic;
+      color: #666;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
 </head>
 <body>
+
+  <header class="header">
+    <div class="logo">
+      <img src="https://tse1.mm.bing.net/th?id=OIP.XOAgFky6Hgx9_ECkYJHR4QHaHX&pid=Api&P=0&h=180" alt="Logo">
+      <h3>Just is Connect</h3>
+    </div>
+    <nav class="navTabs">
+      <a href="#">About</a>
+      <a href="#">AI Consult</a>
+    </nav>
+    <div class="buttons">
+      <button onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <h2 id="welcomeText">Welcome!</h2>
+      <p>Your Business Intelligence Dashboard</p>
+    </div>
+  </section>
+
+  <main class="dashboard">
+    <!-- Business Strategy -->
+    <div class="card">
+      <h3 class="card-title">Strategy of the Day</h3>
+      <p>Offer value before you ask for anything. Build relationships, not just transactions.</p>
+    </div>
+
+    <!-- Productivity Hack -->
+    <div class="card">
+      <h3 class="card-title">Productivity Hack</h3>
+      <p>Use the “2-Minute Rule”: If a task takes less than 2 minutes, do it immediately.</p>
+    </div>
+
+    <!-- Market Insight -->
+    <div class="card">
+      <h3 class="card-title">Market Insight</h3>
+      <p>Consumer demand for ethical and sustainable brands continues to rise in 2025—adapt accordingly.</p>
+    </div>
+
+    <!-- Motivation -->
+    <div class="card">
+      <h3 class="card-title">Motivational Quote</h3>
+      <blockquote>
+        "Opportunities don't happen. You create them."
+        <span class="quote-author">– Chris Grosser</span>
+      </blockquote>
+    </div>
+
+    <!-- Business Video -->
+    <div class="card">
+      <h3 class="card-title">D.Y. Chandrachud: Faith in the Judiciary Endures</h3>
+      <div class="video-container">
+        <!-- <iframe src="https://www.youtube.com/embed/O2T4e_kpHlM" title="How to Write a Business Plan" allowfullscreen></iframe> -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tH3hUlbiJs4?si=bCwyTEmnDGjEDXXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
+
+
   <script>
     const user = JSON.parse(localStorage.getItem('user'));
-    if (!user) {
-      window.location.href = "../login/index.html";
-    }
-
-    const expectedRole = "Business";
-
-    if (user.account_type !== expectedRole) {
+    if (!user || user.account_type !== "Business") {
       alert("Access denied: Unauthorized role.");
       window.location.href = "../login/index.html";
+    } else {
+      document.getElementById('welcomeText').innerText = `Welcome, ${user.username}!`;
+    }
+
+    function logout() {
+      localStorage.removeItem('user');
+      window.location.href = '../about/aboutUs.html';
     }
   </script>
-
-  <h1>Welcome!</h1>
-  <p>You are using a business account.</p>
 </body>
 </html>
